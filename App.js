@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, Button, Image, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TextInput, Button, Image, ScrollView, TouchableOpacity,
+  TouchableWithoutFeedback,
+} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -51,6 +55,14 @@ function OrderHistoryScreen() {
  )
 }
 
+function OrderScreen() {
+  return(
+      <View>
+      <Text>Order Page Here</Text>
+    </View>
+  )
+}
+
 
 //##########################################################################################
 
@@ -77,11 +89,20 @@ function Stack() {
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
+  
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home Screen" component={HomeScreen} />
-      <Tab.Screen name="Histórico de pedidos" component={OrderHistoryScreen} />
-      <Tab.Screen name="Settings" component={Stack} />
+      <Tab.Screen name="Home Screen" component={HomeScreen} options={{ tabBarLabel: "", tabBarIcon: ({size}) => ( 
+        <MaterialIcons name="home" color={'black'} size={size} />)}} />
+
+      <Tab.Screen name="Histórico de pedidos" component={OrderHistoryScreen} options={{ tabBarLabel: "", tabBarIcon: ({size})=>( 
+        <MaterialIcons name="list-alt" color={'green'} size={size} />)}} />
+
+      <Tab.Screen name="Acompanhar pedido" component={OrderScreen} options={{ tabBarLabel: "", tabBarIcon: ({size})=>( 
+        <MaterialIcons name="shopping-bag" size={size} />)}} />
+
+      <Tab.Screen name="Settings" component={Stack} options={{ tabBarLabel: "", tabBarIcon: ({size})=>( 
+        <MaterialIcons name="settings"  color={'black'} size={size} />)}} />
     </Tab.Navigator>
   );
 }
@@ -91,7 +112,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         paddingTop: 50,
-        backgroundColor: 'green',
         marginBottom: 20,
     },
 
@@ -116,12 +136,11 @@ const styles = StyleSheet.create({
 
      logo: {
       marginTop: 5,
-      marginRight: 22,
+      marginRight: '5%',
       width: '80%',
-      maxWidth: 42,
+      maxWidth: '15%',
       height: 42,
       borderRadius: 7,
-      backgroundColor: 'red',
       alignSelf: 'flex-start',
     },
 

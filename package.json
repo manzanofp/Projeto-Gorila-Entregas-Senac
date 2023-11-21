@@ -19,6 +19,7 @@
     "@react-navigation/stack": "*",
     "react-native-pager-view": "6.1.2",
     "@react-navigation/native": "6.0.13",
+    "react-native-vector-icons": "*",
     "react-native-gesture-handler": "~2.9.0",
     "@react-navigation/bottom-tabs": "*",
     "@react-navigation/native-stack": "^6.9.1",
