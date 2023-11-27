@@ -19,17 +19,17 @@ function AcompanharPedidoScreen() {
     {
       nome: 'Macarrão com Patinho',
       preco: 'R$31,90',
-      imagem: require('./classicoDeFrango.PNG'),
+      imagem: require('./assets/classicoDeFrango.PNG'),
     },
     {
       nome: 'Salada com Abacate',
       preco: 'R$24,90',
-      imagem: require('./saladaComAbacate.JPG'),
+      imagem: require('./assets/saladaComAbacate.JPG'),
     },
     {
       nome: 'Salmão com Arroz',
       preco: 'R$40,90',
-      imagem: require('./salmaoComArroz.JPG'),
+      imagem: require('./assets/salmaoComArroz.JPG'),
     },
   ];
 
