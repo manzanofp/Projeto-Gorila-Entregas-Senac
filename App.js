@@ -745,13 +745,14 @@ const styles = StyleSheet.create({
       marginLeft: 13, 
       marginRight: 16,
     },
+
     textboxPreco: {
       marginTop: 12,
       alignSelf: 'lefth',
       fontSize: 12,
       fontWeight: 'bold',
       color: 'Black',
-  },
+   },
 
     sectionArrow: {
       width: 15,
@@ -772,19 +773,19 @@ const styles = StyleSheet.create({
       lineHeight: 20, 
     },
 
-  rectangle: {
-  width: 333,
-  height: '100%',
-  backgroundColor: 'white',
-  shadowColor: 'black',
-  shadowOffset: {
-    width: 0,
-    height: 4,
-  },
-  shadowOpacity: 0.10,
-  shadowRadius: 4.65,
-  elevation: 7,
- },
+    rectangle: {
+      width: 333,
+      height: '100%',
+      backgroundColor: 'white',
+      shadowColor: 'black',
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      shadowOpacity: 0.10,
+      shadowRadius: 4.65,
+      elevation: 7,
+     },
 
  searchInput: {
   width: '85%',
