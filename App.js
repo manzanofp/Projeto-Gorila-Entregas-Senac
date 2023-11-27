@@ -537,6 +537,14 @@ const styles = StyleSheet.create({
       marginRight: 10,
     },
 
+    marmitaImagem: {
+      width: 42,
+      height: 32,
+      borderRadius: 8,
+      marginRight: 10,
+    },
+  
+
     textContainer: {
       flexDirection: 'row',
       alignItems: 'center',
@@ -740,6 +748,7 @@ const styles = StyleSheet.create({
       borderRadius: 7,
       alignSelf: 'center'
     },
+
     sectionText: {
       marginBottom: 20,
       marginLeft: 13, 
