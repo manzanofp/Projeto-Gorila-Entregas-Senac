@@ -115,70 +115,61 @@ function HomeScreen() {
   };  
 
   return (
-        <ScrollView>
-            <View style={styles.container}>
-              <TouchableOpacity
-                onPress={() => navigation.openDrawer()}
-                style={styles.menuButton}
-              >
-                <Text style={styles.buttonText}>☰</Text>
-              </TouchableOpacity>
-
-              <View style={styles.section}>
-                    <Text style={styles.textsuperior}>Olá Thiago!</Text>
-                    <Text style={styles.text}>Seja Bem Vindo!</Text>
-                    <View style={styles.rowContainer1}>
-                      <Button title="🔍" onPress={() => handleSearch(searchQuery)} />
-                      <TextInput
-                        style={styles.searchInput}
-                        placeholder="Pesquisar..."
-                        value={searchQuery}
-                        onChangeText={(text) => setSearchQuery(text)}
-                      />
-                    </View>
+    <ScrollView>
+        <View style={styles.containerka}>
+          <View style={styles.sectionka}>
+                <Text style={styles.textsuperiorka}>Olá Thiago!</Text>
+                <Text style={styles.textka}>Seja Bem Vindo!</Text>
+                <View style={styles.rowContainer1ka}>
+                  <Button title="🔍" onPress={() => handleSearch(searchQuery)} />
+                  <TextInput
+                    style={styles.searchInputka}
+                    placeholder="Pesquisar..."
+                    value={searchQuery}
+                    onChangeText={(text) => setSearchQuery(text)}
+                  />
                 </View>
+            </View>
 
-                <View style={styles.section}>
-                    <Text style={styles.text}> Populares</Text>
-                    <View style={styles.rowContainer}>  
-
-                      <TouchableOpacity style={styles.box} onPress={() => handleBoxPress('Clássico de Frango', 'R$ 30,99', '✨ Uma Trindade Deliciosa: Apresentamos o nosso “Trio Saboroso” - a combinação perfeita de sabores do clássico que aquece o coração e enche a barriga.\n🍗 Filé de Frango Grelhado: Comece com um filé de frango suculento, grelhado à perfeição, com aquele sabor defumado inconfundível. Delicioso a cada mordida.\n🍚 Arroz Aromático: Nosso arroz é cozido até o ponto certo, permeado com aromas que o transportam para um mundo de sabores exóticos.\n🌽 Creme de Milho: Acompanhando, você encontrará nosso creme de milho cremoso, que adiciona uma doçura suave e uma textura incrível a cada garfada.', require('./assets/calssicofrango.jpeg'))}>
+            <View style={styles.sectionka}>
+                <Text style={styles.textka}> Populares</Text>
+                <View style={styles.rowContainerka}>  
+                <TouchableOpacity style={styles.boxka} onPress={() => handleBoxPress('Clássico de Frango', 'R$ 30,99', '✨ Uma Trindade Deliciosa: Apresentamos o nosso “Trio Saboroso” - a combinação perfeita de sabores do clássico que aquece o coração e enche a barriga.\n🍗 Filé de Frango Grelhado: Comece com um filé de frango suculento, grelhado à perfeição, com aquele sabor defumado inconfundível. Delicioso a cada mordida.\n🍚 Arroz Aromático: Nosso arroz é cozido até o ponto certo, permeado com aromas que o transportam para um mundo de sabores exóticos.\n🌽 Creme de Milho: Acompanhando, você encontrará nosso creme de milho cremoso, que adiciona uma doçura suave e uma textura incrível a cada garfada.', require('./assets/calssicofrango.jpeg'))}>
                           <View>
-                            <Text style={styles.textbox}> Clássico de Frango</Text>
-                            <Image style={styles.logo} source={require('./assets/calssicofrango.jpeg')} />
-                            <Text style={styles.textboxPreco}> R$ 30,99</Text>
+                            <Text style={styles.textboxka}> Clássico de Frango</Text>
+                            <Image style={styles.logoka} source={require('./assets/classicoDeFrango.PNG')} />
+                            <Text style={styles.textboxPrecoka}> R$ 30,99</Text>
                           </View>
                       </TouchableOpacity>
 
-                         <TouchableOpacity style={styles.box} onPress={() => handleBoxPress('Salada Gorgonzola', 'R$ 19,90', 
+                         <TouchableOpacity style={styles.boxka} onPress={() => handleBoxPress('Salada Gorgonzola', 'R$ 19,90', 
                          '🥗 Uma explosão de sabores aguarda por você nesta salada exclusiva! Experimente o contraste único entre o frescor dos vegetais selecionados e a intensidade cremosa do queijo gorgonzola.\nCrocantes folhas de alface, rúcula e agrião são cuidadosamente misturadas para criar uma base exuberante. Acrescentamos nozes tostadas e uvas vermelhas suculentas, oferecendo uma textura crocante e doce que harmoniza perfeitamente com o gosto marcante do gorgonzola.\n🧀 O molho especial, preparado artesanalmente, é o toque final dessa obra-prima culinária. Combinando azeite de oliva extra virgem, vinagre balsâmico e segredinhos de nossa cozinha, este molho realça cada camada de sabor, proporcionando uma experiência gastronômica inigualável.', require('./assets/saladaG.jpeg'))}>
-                          <View>
-                            <Text style={styles.textbox}>Salada Gorgonzola</Text>
-                            <Image style={styles.logo} source={require('./assets/saladaG.jpeg')} />
-                            <Text style={styles.textboxPreco}> R$ 19,90</Text>
+                        <View>
+                            <Text style={styles.textboxka}>Salada Gorgonzola</Text>
+                            <Image style={styles.logoka} source={require('./assets/saladaG.jpeg')} />
+                            <Text style={styles.textboxPrecoka}> R$ 19,90</Text>
                           </View>
                       </TouchableOpacity>
 
-                         <TouchableOpacity style={styles.box} onPress={() => handleBoxPress('Lanche de Atum', 'R$ 12,90', '🥪 Este lanche é uma celebração de sabores e nutrientes! Delicie-se com a combinação perfeita de atum suculento, misturado com maionese cremosa, salada e temperos especiais, tudo cuidadosamente servido entre duas fatias de pão integral macio.\n🐟 O atum, fonte de proteína de alta qualidade, é delicadamente misturado com a maionese, proporcionando uma textura irresistível e um sabor rico. Complementado por uma pitada de cebola picada e temperos secretos, cada mordida oferece uma explosão de sabores harmoniosos.\n🌟 Para aqueles que buscam uma opção saudável e saborosa, este lanche é a escolha ideal. Rico em ômega-3 e repleto de nutrientes essenciais, é uma maneira deliciosa de satisfazer sua fome, seja como um almoço rápido ou um lanche reforçado a qualquer hora do dia.',require('./assets/lancheatum.jpeg') )}>
-                          <View>
-                            <Text style={styles.textbox}> Lanche de Atum</Text>
-                            <Image style={styles.logo} source={require('./assets/lancheatum.jpeg')} />
-                            <Text style={styles.textboxPreco}> R$ 12,90</Text>
+                         <TouchableOpacity style={styles.boxka} onPress={() => handleBoxPress('Lanche de Atum', 'R$ 12,90', '🥪 Este lanche é uma celebração de sabores e nutrientes! Delicie-se com a combinação perfeita de atum suculento, misturado com maionese cremosa, salada e temperos especiais, tudo cuidadosamente servido entre duas fatias de pão integral macio.\n🐟 O atum, fonte de proteína de alta qualidade, é delicadamente misturado com a maionese, proporcionando uma textura irresistível e um sabor rico. Complementado por uma pitada de cebola picada e temperos secretos, cada mordida oferece uma explosão de sabores harmoniosos.\n🌟 Para aqueles que buscam uma opção saudável e saborosa, este lanche é a escolha ideal. Rico em ômega-3 e repleto de nutrientes essenciais, é uma maneira deliciosa de satisfazer sua fome, seja como um almoço rápido ou um lanche reforçado a qualquer hora do dia.',require('./lancheatum.jpeg') )}>
+                         <View>
+                            <Text style={styles.textboxka}> Lanche de Atum</Text>
+                            <Image style={styles.logoka} source={require('./assets/lancheatum.jpeg')} />
+                            <Text style={styles.textboxPrecoka}> R$ 12,90</Text>
                           </View>
                       </TouchableOpacity>
-
-                         <TouchableOpacity style={styles.box} onPress={() => handleBoxPress('Macarrão e Patinho', 'R$ 31,90', '🌿 Prepare-se para uma explosão de sabores reconfortantes com nosso prato especial de macarrão com carne de patinho. Feito com carinho e ingredientes frescos, este prato combina a suculência da carne de patinho moída e o delicioso molho de tomate.\n🥩 A carne de patinho, selecionada cuidadosamente, é cozida lentamente em um molho rico e encorpado, temperado com ervas aromáticas e um toque especial de alho. O resultado é uma mistura irresistível de sabores que se fundem harmoniosamente a cada garfada\n🍝 O macarrão al dente, cuidadosamente cozido para manter sua textura perfeita, absorve o sabor do molho, criando uma combinação de sabores que é simplesmente inigualável\nEste prato é uma escolha perfeita para aqueles que buscam um clássico reconfortante e saboroso. Seja para um almoço em família ou para saciar a fome após um longo dia!',require('./assets/macarraop.jpeg'))}>
+                      <TouchableOpacity style={styles.boxka} onPress={() => handleBoxPress('Macarrão e Patinho', 'R$ 31,90', '🌿 Prepare-se para uma explosão de sabores reconfortantes com nosso prato especial de macarrão com carne de patinho. Feito com carinho e ingredientes frescos, este prato combina a suculência da carne de patinho moída e o delicioso molho de tomate.\n🥩 A carne de patinho, selecionada cuidadosamente, é cozida lentamente em um molho rico e encorpado, temperado com ervas aromáticas e um toque especial de alho. O resultado é uma mistura irresistível de sabores que se fundem harmoniosamente a cada garfada\n🍝 O macarrão al dente, cuidadosamente cozido para manter sua textura perfeita, absorve o sabor do molho, criando uma combinação de sabores que é simplesmente inigualável\nEste prato é uma escolha perfeita para aqueles que buscam um clássico reconfortante e saboroso. Seja para um almoço em família ou para saciar a fome após um longo dia!',require('./macarraop.jpeg'))}>
                           <View>
-                            <Text style={styles.textbox}>Macarrão e Patinho</Text>
-                            <Image style={styles.logo} source={require('./assets/macarraop.jpeg')} />
-                            <Text style={styles.textboxPreco}> R$ 31,90</Text>
+                            <Text style={styles.textboxka}>Macarrão e Patinho</Text>
+                            <Image style={styles.logoka} source={require('./assets/macarraop.jpeg')} />
+                            <Text style={styles.textboxPrecoka}> R$ 31,90</Text>
                           </View>
                       </TouchableOpacity>
                     </View>
                 </View>
             </View>
         </ScrollView>
-    );
+);
 }
 
 function OrderHistoryScreen() {
@@ -985,30 +976,30 @@ cartCardPriceText: {
   fontWeight: 'bold'
 },
 
-cartSpaceBetween: {
-  height: 140
-},
+  cartSpaceBetween: {
+    height: 140
+  },
 
-cartUnderLine: {
-  marginLeft: 20,
-  marginRight: 20,
-  borderWidth: 1,
-  borderRadius: 10,
-  borderColor: 'rgba(0, 0, 0, 0.6)',
-},
+  cartUnderLine: {
+    marginLeft: 20,
+    marginRight: 20,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: 'rgba(0, 0, 0, 0.6)',
+  },
 
-cartTotal: {
-  marginTop: 16,
-  marginLeft: 20,
-  marginRight: 20,
-  flexDirection: 'row',
-  justifyContent: 'space-between'
-},
+  cartTotal: {
+    marginTop: 16,
+    marginLeft: 20,
+    marginRight: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
 
-cartTotalText: {
-  fontSize: 12,
-  fontWeight: 'bold'
-},
+  cartTotalText: {
+    fontSize: 12,
+    fontWeight: 'bold'
+  },
 
 checkOutContainer: {
   justifyContent: 'center',
@@ -1031,7 +1022,165 @@ checkOutCart: {
 checkOutCartText: {
   color: 'white',
   fontSize: 9
-}
+},
+
+containerka: {
+  flex: 1,
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+  buttonTextka: {
+  fontSize: 20,
+  marginTop: 10
+},
+buttonka: {
+  backgroundColor: 'lightgray',
+  borderRadius: 5,
+  paddingHorizontal: 5,
+  paddingVertical: 5,
+  marginHorizontal: 5,
+},
+ productNameka: {
+position: 'absolute',
+fontSize: 13,
+fontWeight: 'bold',
+textAlign: 'center',
+left: 103,
+top: 40
+},
+
+productPriceka: {
+  position: 'absolute',
+  fontSize: 13,
+  fontWeight: 'bold',
+  textAlign: 'center',
+  left: 230,
+  top: 40
+},
+productQTDka: {
+  position: 'absolute',
+  fontSize: 12,
+  fontWeight: 'bold',
+  textAlign: 'center',
+  left: 103,
+  top: 70
+},
+customButtonka: {
+backgroundColor: 'lightgray',
+borderRadius: 5,
+paddingHorizontal: 7,
+paddingVertical: 5,
+marginHorizontal: 5,
+},
+
+botaopedidoka: {
+  backgroundColor: 'lightgray',
+  borderRadius: 5,
+  paddingHorizontal: 7,
+  paddingVertical: 5,
+  marginHorizontal: 2,
+  textAlign: 'center',
+  left: 70,
+  top: 380
+  },
+  buttonTextDka: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  inputka: {
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    minWidth: 50,
+    textAlign: 'center',
+    width: 50,
+    height: 35
+  },
+
+  sectionka: {
+    marginBottom: 20,
+},
+textsuperiorka: {
+    fontSize: 16,
+    marginTop: 50,
+},
+textka: {
+    fontSize: 16,
+    fontWeight: 'bold',
+},
+rowContainer1ka: {
+    flexDirection: 'row',
+},
+rowContainerka: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+},
+columnContainerka: {
+    flexDirection: 'column',
+},
+boxka: {
+  padding: 10,
+  backgroundColor: 'lemonchiffon',
+  borderRadius: 7,
+  marginTop: 30,
+  marginHorizontal: 15,
+  width: 140,
+  opacity: 1,
+  height: 160,
+},
+box1ka: {
+  padding: 5,
+  backgroundColor: 'lemonchiffon',
+  borderRadius: 7,
+  marginTop: 20,
+  width: 300,
+  opacity: 1,
+  height: 100,
+},
+textboxka: {
+  alignSelf: 'center',
+  position: 'absolute',
+  fontSize: 12,
+  fontWeight: 'bold',
+  color: 'Black',
+},
+
+logoka: {
+  marginTop: 25,
+  width: 95,
+  height: 90,
+  borderRadius: 7,
+  alignSelf: 'center'
+},
+logoDka: {
+  marginTop: 0,
+  width: 329,
+  height: 329,
+  borderRadius: 7,
+  alignSelf: 'center'
+},
+textboxPrecoka: {
+    marginTop: 12,
+    alignSelf: 'lefth',
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: 'Black',
+},
+
+searchInputka: {
+  width: '85%',
+  height: '50%',
+  borderRadius: 7,
+  borderWidth: 1,
+  borderColor: 'black',
+  padding: 7,
+  marginTop: 10,
+  marginBottom: 10,
+ },
+
 
 });
 
