@@ -34,7 +34,7 @@ function AcompanharPedidoScreen() {
   ];
 
   return (
-    <ScrollView style={styles.containerPedidos}>
+    <ScrollView style={styles.container}>
       <View style={styles.content}>
         {/* Ícone de retorno */}
         <TouchableOpacity
@@ -182,14 +182,6 @@ function HomeScreen() {
 }
 
 function OrderHistoryScreen() {
-return(
-      <View>
-      <Text>historico</Text>
-    </View>
-  )
-}
-
-function OrderHistoryScreen() {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -257,6 +249,7 @@ function MyTabs() {
         tabBarLabel: "", tabBarIcon: ({ size }) => (
           <MaterialIcons name="settings" color={'black'} size={size} />)
       }} />
+
     </Tab.Navigator>
   );
 }
@@ -370,6 +363,158 @@ const styles = StyleSheet.create({
         paddingTop: 50,
         marginBottom: 20,
     },
+    content:{
+      flex:1,
+      padding:20,
+    },
+
+    arrow: {
+      marginTop: 20,
+      marginBottom: 20,
+    },
+
+    acompanheSeuPedido: {
+      width: 130,
+      height: 20,
+      fontSize: 12,
+      alignSelf: 'center',
+      fontFamily: 'Inter',
+      fontWeight: '600',
+      color: '#000000',
+      marginLeft: 25,
+      marginTop: -17,
+    },
+
+    pedidoContainer: {
+      width: 340,
+      height: 520,
+      backgroundColor: 'white',
+      alignSelf: 'center',
+      marginTop: 20,
+      borderRadius: 15,
+      marginBottom: 20,
+      padding: 20,
+    },
+
+    pedidoText:{
+      fontSize: 14,
+      fontFamily: 'Inter',
+      fontWeight: '500',
+      color: '#000000',
+      marginBottom: 10,
+      marginLeft: 10,
+    },
+
+    marmitaContainer: {
+      width: 42,
+      height: 32,
+      borderRadius: 8,
+      marginRight: 10,
+    },
+
+    textContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    
+    marmitaNome: {
+      fontSize: 13,
+      fontFamily: 'Inter',
+      fontWeight: '500',
+      color: '#000000',
+      width: 150,
+      marginRight: 30,
+    },
+
+    marmitaPreco:{
+      fontSize: 12,
+      fontFamily: 'Inter',
+      fontWeight : 'normal',
+      color: '#0FA958',
+    },
+
+    total:{
+      fontSize: 14,
+      fontFamily: 'Inter',
+      fontWeight: '500',
+      color: '#000000',
+      marginBottom: 10,
+      marginLeft: 10,
+    },
+
+    totalValor:{
+      fontSize: 12,
+      fontFamily: 'Inter',
+      fontWeight: '500',
+      color: '#0FA958',
+      marginBottom: 10,
+      marginRight: 10,
+    },
+
+    totalContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginTop: 20,
+    },
+
+    pagoPeloAppContainer: {
+      flexDirection: 'row',
+      justifyContent:  'space-between',
+      alignItems:  'center',
+      marginVertical: 10,
+      padding: 10,
+      backgroundColor: 'White',
+      borderRadius: 10,
+    },
+
+    pagoPeloApp: {
+      marginTop: -10,
+      fontSize: 14,
+      fontFamily: 'Inter',
+      fontWeight: '500',
+      color:'#000000',
+
+    },
+
+    numeroCartao: {
+      margimtop: -10,
+      fontSize: 14,
+      fontFamily: 'Inter',
+
+    },
+
+    enderecoContainer: {
+      marginTop: -10,
+      padding: 10,
+      backgroundColor: 'white',
+      borderRadius: 10,
+    },
+    enderecoTitulo: {
+      fontSize: 14,
+      fontFamily: 'Inter',
+      fontWeight: '500',
+      color: '#000000',
+      marginBottom: 5,
+    },
+
+    enderecoTexto: {
+      fontSize: 12,
+      fontFamily: 'Inter',
+      fontWeight: '400',
+      color: '#000000',
+    },
+    checkboxesContainer: {
+      marginTop: -145,
+      marginLeft: -20, 
+    },
+    checkboxItem: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: -20,
+      marginLeft: 25,
+    },
+
     menuButton: {
       position: 'absolute',
       left: 10,
