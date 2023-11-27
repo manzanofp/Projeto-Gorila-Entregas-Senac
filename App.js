@@ -211,7 +211,7 @@ function DetailsScreen() {
   return (
     <ScrollView>
       <View style={styles.headerImageContainer}>
-        <Image style={styles.detailsImage} source={require('./asserts/classicoDeFrango.PNG')} />
+        <Image style={styles.detailsImage} source={require('./assets/classicoDeFrango.PNG')} />
       </View>
       <View>
         <Text style={styles.popularItem}>Marmita popular</Text>
